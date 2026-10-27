@@ -11,7 +11,6 @@
   --muted: #6b6679;
   --white: #ffffff;
   --whatsapp: #1fa855;
-  --error: #c62828;
 
   --radius: 14px;
   --radius-lg: 22px;
@@ -205,8 +204,13 @@ a {
   background: #188a45;
 }
 
-.btn-block {
-  width: 100%;
+.btn-yellow {
+  background: var(--yellow);
+  color: var(--ink);
+}
+
+.btn-yellow:hover {
+  background: #ffd36b;
 }
 
 /* ---------- Hero ---------- */
@@ -380,8 +384,7 @@ a {
   background: var(--yellow-soft);
 }
 
-.card-icon svg,
-.success-icon svg {
+.card-icon svg {
   width: 26px;
   height: 26px;
   fill: none;
@@ -395,167 +398,16 @@ a {
 .waitlist {
   background: var(--purple);
   color: rgba(255, 255, 255, 0.86);
-  scroll-margin-top: 0;
 }
 
 .waitlist h2 {
   color: var(--white);
 }
 
-.waitlist-inner {
-  display: grid;
-  grid-template-columns: 1fr 1.05fr;
-  gap: 56px;
-  align-items: center;
-}
-
-.waitlist-copy p:last-child {
+.waitlist p:not(.section-label) {
+  max-width: 560px;
+  margin: 0 auto 32px;
   font-size: 1.12rem;
-}
-
-.form-card {
-  padding: 36px;
-  border-radius: var(--radius-lg);
-  background: var(--white);
-  color: var(--body);
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.25);
-}
-
-/* Form */
-.field {
-  margin-bottom: 20px;
-}
-
-.field label {
-  display: block;
-  margin-bottom: 8px;
-  color: var(--ink);
-  font-weight: 600;
-  font-size: 0.95rem;
-}
-
-.req {
-  color: var(--purple);
-}
-
-.optional {
-  color: var(--muted);
-  font-weight: 400;
-}
-
-.field input[type="text"],
-.field input[type="email"],
-.field select {
-  width: 100%;
-  min-height: 50px;
-  padding: 12px 14px;
-  border: 1.5px solid #d6d1e0;
-  border-radius: 10px;
-  background: var(--white);
-  color: var(--ink);
-  font: inherit;
-  font-size: 16px; /* prevents iOS zoom on focus */
-}
-
-.field select {
-  appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%233d1a78' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right 14px center;
-  background-size: 18px;
-  padding-right: 42px;
-}
-
-.field input:focus,
-.field select:focus {
-  outline: none;
-  border-color: var(--purple);
-  box-shadow: 0 0 0 4px rgba(61, 26, 120, 0.14);
-}
-
-.field input[aria-invalid="true"] {
-  border-color: var(--error);
-}
-
-.field.checkbox {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 12px;
-  align-items: start;
-}
-
-.field.checkbox input {
-  width: 20px;
-  height: 20px;
-  margin: 3px 0 0;
-  accent-color: var(--purple);
-}
-
-.field.checkbox label {
-  margin: 0;
-  font-weight: 400;
-  font-size: 0.92rem;
-  color: var(--body);
-}
-
-.field.checkbox .error {
-  grid-column: 2;
-}
-
-.error {
-  margin: 6px 0 0;
-  color: var(--error);
-  font-size: 0.88rem;
-  font-weight: 500;
-}
-
-.form-status {
-  margin: 12px 0 0;
-  min-height: 1em;
-  color: var(--error);
-  font-size: 0.92rem;
-  text-align: center;
-}
-
-.form-status:empty {
-  margin: 0;
-}
-
-.hp {
-  position: absolute;
-  left: -9999px;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-}
-
-.success {
-  text-align: center;
-  outline: none;
-}
-
-.success-icon {
-  display: grid;
-  place-items: center;
-  width: 64px;
-  height: 64px;
-  margin: 0 auto 20px;
-  border-radius: 50%;
-  background: var(--yellow);
-}
-
-.success-icon svg {
-  width: 32px;
-  height: 32px;
-  stroke-width: 2.6;
-}
-
-.success p {
-  color: var(--muted);
-}
-
-.success .btn {
-  margin-top: 8px;
 }
 
 /* Community */
@@ -744,15 +596,6 @@ a {
     max-width: 560px;
     margin: 0 auto;
   }
-
-  .waitlist-inner {
-    grid-template-columns: 1fr;
-    gap: 36px;
-  }
-
-  .waitlist-copy {
-    text-align: center;
-  }
 }
 
 @media (max-width: 600px) {
@@ -789,10 +632,6 @@ a {
 
   .contact {
     padding-top: 0;
-  }
-
-  .form-card {
-    padding: 24px 20px;
   }
 
   .contact-card {

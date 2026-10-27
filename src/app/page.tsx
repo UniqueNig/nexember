@@ -2,7 +2,7 @@ import { Footer } from "@/components/Footer";
 import { CapIcon, GrowthIcon, MailIcon, SwitchIcon, WhatsAppIcon } from "@/components/icons";
 import { Logo } from "@/components/Logo";
 import { TrackedLink } from "@/components/TrackedLink";
-import { WaitlistForm } from "@/components/WaitlistForm";
+import { WaitlistLink } from "@/components/WaitlistLink";
 import { site } from "@/lib/site";
 
 const audiences = [
@@ -49,9 +49,9 @@ export default function Home() {
               with opportunities to learn, grow and take their next step.
             </p>
             <div className="cta-row">
-              <TrackedLink href="#waitlist" className="btn btn-primary" event="waitlist_cta_hero">
+              <WaitlistLink className="btn btn-primary" event="waitlist_click_hero">
                 Join the Waitlist
-              </TrackedLink>
+              </WaitlistLink>
               <TrackedLink
                 href={site.whatsappUrl}
                 target="_blank"
@@ -104,18 +104,16 @@ export default function Home() {
 
         {/* 4. WAITLIST */}
         <section className="section waitlist" id="waitlist">
-          <div className="container waitlist-inner">
-            <div className="waitlist-copy">
-              <p className="section-label on-dark">Join the waitlist</p>
-              <h2>Be among the first.</h2>
-              <p>
-                NexEmber is coming soon. Join the waitlist to hear about our launch, upcoming opportunities and
-                what’s next.
-              </p>
-            </div>
-            <div className="form-card">
-              <WaitlistForm />
-            </div>
+          <div className="container narrow center">
+            <p className="section-label on-dark">Join the waitlist</p>
+            <h2>Be among the first.</h2>
+            <p>
+              NexEmber is coming soon. Join the waitlist to hear about our launch, upcoming opportunities and what’s
+              next.
+            </p>
+            <WaitlistLink className="btn btn-yellow" event="waitlist_click_section">
+              Join the Waitlist
+            </WaitlistLink>
           </div>
         </section>
 

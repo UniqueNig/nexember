@@ -1,6 +1,6 @@
 // Central place for brand copy and outbound links.
-// Links come from environment variables (see .env.example) so they can be
-// changed in Vercel without touching code.
+// Links can be overridden with environment variables (see .env.example)
+// so they can be changed in Vercel without touching code.
 
 export const site = {
   name: "NexEmber",
@@ -8,8 +8,9 @@ export const site = {
   description:
     "Connecting people to the right opportunities to learn, grow and move forward in their careers.",
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://nexember.com",
+  waitlistUrl: process.env.NEXT_PUBLIC_WAITLIST_URL || "https://tally.so/r/zExG0Z",
   whatsappUrl:
-    process.env.NEXT_PUBLIC_WHATSAPP_URL || "https://whatsapp.com/channel/YOUR-CHANNEL-ID",
+    process.env.NEXT_PUBLIC_WHATSAPP_URL || "https://whatsapp.com/channel/0029Vb8LFvyEawduwKQqWI2m",
   contactEmail: process.env.NEXT_PUBLIC_CONTACT_EMAIL || "hello@nexember.com",
   socials: [
     { label: "LinkedIn", key: "linkedin", url: process.env.NEXT_PUBLIC_LINKEDIN_URL },
@@ -17,11 +18,3 @@ export const site = {
     { label: "X (Twitter)", key: "x", url: process.env.NEXT_PUBLIC_X_URL },
   ] as const,
 };
-
-export const careerStages = [
-  "Beginner / career starter",
-  "Job seeker",
-  "Career switcher",
-  "Working professional",
-  "Other",
-] as const;

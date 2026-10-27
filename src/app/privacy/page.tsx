@@ -26,22 +26,23 @@ export default function PrivacyPage() {
             ← Back to home
           </Link>
           <h1>Privacy Policy</h1>
-          <p className="muted">Last updated: 26 October 2026</p>
+          <p className="muted">Last updated: 27 October 2026</p>
 
           <p>
-            This policy explains what information NexEmber (“we”, “us”) collects through this website, why we collect
-            it and how we look after it. We keep it simple: we only collect what we need to keep you updated about
-            NexEmber.
+            This policy explains what information NexEmber (“we”, “us”), based in Nigeria, collects through this
+            website and our waitlist, why we collect it and how we look after it. We keep it simple: we only collect
+            what we need to keep you updated about NexEmber. We handle personal data in line with the Nigeria Data
+            Protection Act 2023.
           </p>
 
           <h2>What we collect</h2>
           <p>When you join our waitlist, we collect:</p>
           <ul>
-            <li>your name and email address;</li>
-            <li>your career stage, if you choose to tell us;</li>
+            <li>the details you enter in the waitlist form, such as your name and email address;</li>
+            <li>any optional information you choose to share, such as where you are in your career;</li>
             <li>
-              basic information about how you found us, such as the website that referred you or the campaign link you
-              clicked, the date and time you signed up, and your browser type.
+              basic information about how you found us, such as the campaign link you clicked, and the date and time
+              you signed up.
             </li>
           </ul>
           <p>
@@ -62,9 +63,10 @@ export default function PrivacyPage() {
 
           <h2>Where it is stored</h2>
           <p>
-            Waitlist signups are stored securely in Google Workspace (Google Sheets), which only authorised members of
-            the NexEmber team can access. Our website is hosted by Vercel. These providers process data on our
-            behalf and under their own security and privacy commitments.
+            Our waitlist form is provided by Tally (tally.so), and signups are stored in our Tally account, which only
+            authorised members of the NexEmber team can access. Our website is hosted by Vercel. These providers
+            process data on our behalf and under their own security and privacy commitments, and may store it outside
+            Nigeria. Where that happens, we rely on them to protect it to an appropriate standard.
           </p>
 
           <h2>How long we keep it</h2>
@@ -83,6 +85,10 @@ export default function PrivacyPage() {
           <p>
             To do any of these, email us at <a href={`mailto:${email}`}>{email}</a>. We will respond as soon as we
             can, and in any case within the time required by applicable data protection law.
+          </p>
+          <p>
+            If you are unhappy with how we have handled your information, you also have the right to complain to the
+            Nigeria Data Protection Commission (NDPC).
           </p>
 
           <h2>WhatsApp community</h2>
