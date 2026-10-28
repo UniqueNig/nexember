@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     description: `${site.description} Join the waitlist.`,
     url: "/",
   },
-  twitter: { card: "summary" },
+  twitter: { card: "summary_large_image" },
 };
 
 export const viewport: Viewport = {

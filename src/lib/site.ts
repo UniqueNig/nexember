@@ -7,7 +7,7 @@ export const site = {
   tagline: "Your next career opportunity starts here.",
   description:
     "Connecting people to the right opportunities to learn, grow and move forward in their careers.",
-  url: process.env.NEXT_PUBLIC_SITE_URL || "https://nexember.com",
+  url: process.env.NEXT_PUBLIC_SITE_URL || "https://www.nexember.org",
   waitlistUrl: process.env.NEXT_PUBLIC_WAITLIST_URL || "https://tally.so/r/zExG0Z",
   whatsappUrl:
     process.env.NEXT_PUBLIC_WHATSAPP_URL || "https://whatsapp.com/channel/0029Vb8LFvyEawduwKQqWI2m",

@@ -25,7 +25,7 @@ npm run dev     # http://localhost:3000
 
 1. At [vercel.com](https://vercel.com) → **Add New → Project** → import this GitHub repo. It detects Next.js automatically.
 2. Deploy. No environment variables are required; links have defaults in `src/lib/site.ts`.
-3. **Custom domain + HTTPS:** Project → **Settings → Domains** → add `nexember.com` and `www.nexember.com`. Vercel shows the DNS records to add at the domain registrar. HTTPS certificates are issued automatically.
+3. **Custom domain + HTTPS:** Project → **Settings → Domains** → add `nexember.org` and `www.nexember.org`. Vercel shows the DNS records to add at the domain registrar. HTTPS certificates are issued automatically.
 4. **Analytics:** Project → **Analytics** tab → Enable. This counts page views without cookies.
    Click events (`waitlist_click_*`, `whatsapp_click_*`, `contact_click`) are already sent from the code. Viewing custom events in the dashboard needs Vercel's Pro plan.
 
@@ -36,8 +36,8 @@ Signups live in Tally. To view or export them: Tally → the form → **Submissi
 **Source tracking:** the Join the Waitlist buttons pass any `utm_source`, `utm_medium` and `utm_campaign` from the page URL on to the Tally form. To save them with each signup, add three **Hidden fields** in the Tally form named exactly `utm_source`, `utm_medium` and `utm_campaign`. Then share links like:
 
 ```text
-https://nexember.com/?utm_source=instagram&utm_medium=bio&utm_campaign=launch
-https://nexember.com/?utm_source=whatsapp&utm_medium=channel&utm_campaign=launch
+https://www.nexember.org/?utm_source=instagram&utm_medium=bio&utm_campaign=launch
+https://www.nexember.org/?utm_source=whatsapp&utm_medium=channel&utm_campaign=launch
 ```
 
 ## Changing things
