@@ -1,9 +1,26 @@
 import { Footer } from "@/components/Footer";
-import { CapIcon, GrowthIcon, MailIcon, SwitchIcon, WhatsAppIcon } from "@/components/icons";
+import {
+  BookIcon,
+  CapIcon,
+  GrowthIcon,
+  MailIcon,
+  RocketIcon,
+  SwitchIcon,
+  ToolsIcon,
+  VideoIcon,
+  WhatsAppIcon,
+} from "@/components/icons";
 import { Logo } from "@/components/Logo";
 import { TrackedLink } from "@/components/TrackedLink";
 import { WaitlistLink } from "@/components/WaitlistLink";
 import { site } from "@/lib/site";
+
+const opportunities = [
+  { icon: VideoIcon, label: "Webinars" },
+  { icon: ToolsIcon, label: "Workshops" },
+  { icon: RocketIcon, label: "Boot camps" },
+  { icon: BookIcon, label: "Structured learning programmes" },
+];
 
 const audiences = [
   {
@@ -36,33 +53,49 @@ export default function Home() {
         {/* 1. HERO */}
         <section className="hero">
           <div className="container hero-inner">
-            <p className="eyebrow">Coming soon</p>
-            <h1>
-              Your next career opportunity <span className="highlight">starts here.</span>
-            </h1>
-            <p className="lead">
-              We’re building NexEmber to help you discover learning opportunities that build your skills, open new
-              possibilities and move your career forward.
-            </p>
-            <p className="lead secondary">
-              From webinars and workshops to boot camps and structured learning programmes, we’re connecting people
-              with opportunities to learn, grow and take their next step.
-            </p>
-            <div className="cta-row">
-              <WaitlistLink className="btn btn-primary" event="waitlist_click_hero">
-                Join the Waitlist
-              </WaitlistLink>
-              <TrackedLink
-                href={site.whatsappUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-outline"
-                event="whatsapp_click_hero"
-              >
-                <WhatsAppIcon />
-                Join Our WhatsApp Community
-              </TrackedLink>
+            <div className="hero-copy">
+              <p className="eyebrow">Coming soon</p>
+              <h1>
+                Your next career opportunity <span className="highlight">starts here.</span>
+              </h1>
+              <p className="lead">
+                We’re building NexEmber to help you discover learning opportunities that build your skills, open new
+                possibilities and move your career forward.
+              </p>
+              <p className="lead secondary">
+                From webinars and workshops to boot camps and structured learning programmes, we’re connecting people
+                with opportunities to learn, grow and take their next step.
+              </p>
+              <div className="cta-row">
+                <WaitlistLink className="btn btn-primary" event="waitlist_click_hero">
+                  Join the Waitlist
+                </WaitlistLink>
+                <TrackedLink
+                  href={site.whatsappUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-outline"
+                  event="whatsapp_click_hero"
+                >
+                  <WhatsAppIcon />
+                  Join Our WhatsApp Community
+                </TrackedLink>
+              </div>
             </div>
+
+            <aside className="hero-card" aria-label="Opportunities on NexEmber">
+              <p className="hero-card-title">Opportunities to learn, grow and move forward</p>
+              <ul>
+                {opportunities.map(({ icon: Icon, label }) => (
+                  <li key={label}>
+                    <span className="hero-card-icon">
+                      <Icon />
+                    </span>
+                    {label}
+                  </li>
+                ))}
+              </ul>
+            </aside>
           </div>
         </section>
 

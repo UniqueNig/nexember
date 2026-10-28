@@ -72,6 +72,46 @@ export function SwitchIcon() {
   );
 }
 
+export function VideoIcon() {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <rect x="3" y="6" width="13" height="12" rx="2" />
+      <path d="M16 10.5l5-3v9l-5-3" />
+    </svg>
+  );
+}
+
+export function ToolsIcon() {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <circle cx="9" cy="8" r="3.5" />
+      <path d="M2.5 20c.6-3.4 3.2-5.5 6.5-5.5s5.9 2.1 6.5 5.5" />
+      <path d="M16 4.5a3.5 3.5 0 010 7" />
+      <path d="M18 14.8c2 .7 3.2 2.5 3.5 5.2" />
+    </svg>
+  );
+}
+
+export function RocketIcon() {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M12 15l-3-3c1.5-4.5 4.5-8 10-9-1 5.5-4.5 8.5-9 10" />
+      <path d="M9 12H5l2.5-3.5H12" />
+      <path d="M12 15v4l3.5-2.5V12" />
+      <path d="M6.5 16.5c-1.5.5-2.5 2-2.5 3.5 1.5 0 3-1 3.5-2.5" />
+    </svg>
+  );
+}
+
+export function BookIcon() {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M3 5.5C5.5 4.5 9 4.5 12 6.5c3-2 6.5-2 9-1v13c-2.5-1-6-1-9 1-3-2-6.5-2-9-1v-13z" />
+      <path d="M12 6.5v13" />
+    </svg>
+  );
+}
+
 export function GrowthIcon() {
   return (
     <svg viewBox="0 0 24 24" aria-hidden="true">

@@ -52,10 +52,11 @@ h3 {
   line-height: 1.15;
   letter-spacing: -0.01em;
   margin: 0 0 16px;
+  text-wrap: balance; /* even line lengths, no single word left on the last line */
 }
 
 h1 {
-  font-size: clamp(2.4rem, 6vw, 4.25rem);
+  font-size: clamp(2.4rem, 5vw, 4rem);
   font-weight: 800;
 }
 
@@ -71,6 +72,7 @@ h3 {
 
 p {
   margin: 0 0 16px;
+  text-wrap: pretty;
 }
 
 a {
@@ -209,6 +211,10 @@ a {
   position: relative;
   padding: 56px 0 96px;
   overflow: hidden;
+  /* Soft lavender wash, faded out at the top so it blends into the white header */
+  background:
+    linear-gradient(#fff, rgba(255, 255, 255, 0) 140px),
+    radial-gradient(ellipse 70% 80% at 10% 45%, #f3ecfc 0%, rgba(243, 236, 252, 0) 70%);
 }
 
 /* A soft ember glow behind the headline */
@@ -226,8 +232,65 @@ a {
 
 .hero-inner {
   position: relative;
-  max-width: 880px;
-  text-align: center;
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+  gap: 64px;
+  align-items: center;
+}
+
+.hero-card {
+  padding: 28px;
+  border: 1px solid var(--purple-line);
+  border-radius: var(--radius-lg);
+  background: var(--white);
+  box-shadow: var(--shadow);
+}
+
+.hero-card-title {
+  margin-bottom: 20px;
+  color: var(--ink);
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.hero-card ul {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.hero-card li {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 14px;
+  border-radius: var(--radius);
+  background: var(--purple-soft);
+  color: var(--ink);
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.hero-card-icon {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: var(--yellow-soft);
+}
+
+.hero-card-icon svg {
+  width: 22px;
+  height: 22px;
+  fill: none;
+  stroke: var(--purple);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 .eyebrow {
@@ -263,8 +326,8 @@ a {
 }
 
 .lead {
-  max-width: 680px;
-  margin: 0 auto 16px;
+  max-width: 600px;
+  margin: 0 0 16px;
   font-size: 1.15rem;
   color: var(--body);
 }
@@ -277,9 +340,8 @@ a {
 .cta-row {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   gap: 14px;
-  margin-top: 36px;
+  margin-top: 32px;
 }
 
 /* ---------- Sections ---------- */
@@ -582,6 +644,15 @@ a {
 
 /* ---------- Responsive ---------- */
 @media (max-width: 900px) {
+  .hero-inner {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .hero-card {
+    max-width: 560px;
+  }
+
   .cards {
     grid-template-columns: 1fr;
     max-width: 560px;
@@ -627,6 +698,34 @@ a {
 
   .contact {
     padding-top: 0;
+  }
+
+  .hero-card {
+    padding: 20px;
+  }
+
+  /* Longer paragraphs read better left-aligned on narrow screens */
+  .waitlist .container,
+  .community .container,
+  .contact-card {
+    text-align: left;
+  }
+
+  .waitlist p:not(.section-label),
+  .community p,
+  .contact-card > p:not(.small) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .community-badge {
+    margin-left: 0;
+  }
+
+  .waitlist .btn,
+  .community .btn,
+  .contact-card .btn {
+    width: 100%;
   }
 
   .contact-card {
