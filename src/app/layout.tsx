@@ -1,12 +1,12 @@
 import type { Metadata, Viewport } from "next";
-import { Plus_Jakarta_Sans } from "next/font/google";
+import { Libre_Franklin } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { site } from "@/lib/site";
 import "./globals.css";
 
-const font = Plus_Jakarta_Sans({
+// Brand typeface (variable font, so every weight from Thin to Black is available)
+const font = Libre_Franklin({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
   display: "swap",
 });
 
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#3d1a78",
+  themeColor: "#55268e",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

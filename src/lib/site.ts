@@ -13,7 +13,11 @@ export const site = {
     process.env.NEXT_PUBLIC_WHATSAPP_URL || "https://whatsapp.com/channel/0029Vb8LFvyEawduwKQqWI2m",
   contactEmail: process.env.NEXT_PUBLIC_CONTACT_EMAIL || "hello@nexember.com",
   socials: [
-    { label: "LinkedIn", key: "linkedin", url: process.env.NEXT_PUBLIC_LINKEDIN_URL },
+    {
+      label: "LinkedIn",
+      key: "linkedin",
+      url: process.env.NEXT_PUBLIC_LINKEDIN_URL || "https://www.linkedin.com/company/nexember/",
+    },
     { label: "Instagram", key: "instagram", url: process.env.NEXT_PUBLIC_INSTAGRAM_URL },
     { label: "X (Twitter)", key: "x", url: process.env.NEXT_PUBLIC_X_URL },
   ] as const,
